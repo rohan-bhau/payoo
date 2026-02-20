@@ -8,9 +8,7 @@ document.getElementById("bonus-btn").addEventListener("click", function () {
     return;
   }
   if (
-    couponNumber === "Arna Anthonia" ||
-    couponNumber === "Arna corraya" ||
-    couponNumber === "Arna Anthonia Corraya"
+    couponNumber === "B1H8A4U1"
   ) {
     //? 2-1 true:: alert you got the bonus
     alert("You get a Bonus of 5000 tk");
