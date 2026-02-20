@@ -3,9 +3,9 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
 
   const agentNumber = getValueFromInput("agent-number");
 
-  if(agentNumber.length !=11){
-    alert("Enter a valid number")
-    return
+  if (agentNumber.length != 11) {
+    alert("Enter a valid number");
+    return;
   }
   //   //? 2. get the amount number , validate , convert to number
 
@@ -13,7 +13,7 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
 
   //? 3. get the current amount , validate , convert to number
 
-  const currentBalance = getBalance()
+  const currentBalance = getBalance();
 
   //? 4. calculate the new balance
 
@@ -31,7 +31,20 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
 
     alert("CashOut successfull");
     console.log(newBalance);
-    setBalance(newBalance)
+    setBalance(newBalance);
+
+    //? 1- get the  history container
+    const history = document.getElementById("history-container");
+    //? 2- create a new div
+    const newHistory = document.createElement("div");
+    //? 3- create a innerHTML in the new div
+    newHistory.innerHTML = `
+    <div class="bg-base-100 py-5 rounded-md pl-4">
+       CashOut Successfull to ${agentNumber}, cashout amount ${cashoutAmount} at ${new Date()}
+        </div>
+    `;
+    //? 4- append the div in the history container
+    history.appendChild(newHistory);
   } else {
     //? 5.2 false :: show an alert > return
     alert("Invalid Pin");
