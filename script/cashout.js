@@ -39,10 +39,15 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
     const newHistory = document.createElement("div");
     //? 3- create a innerHTML in the new div
     newHistory.innerHTML = `
-    <div class="bg-base-100 py-5 rounded-md pl-4">
-       CashOut Successfull to ${agentNumber}, cashout amount ${cashoutAmount} at ${new Date()}
-        </div>
-    `;
+            <div class="bg-base-100 py-5 rounded-md pl-4 flex items-center gap-3">
+            <div class="bg-base-200 w-[46px] h-[46px] rounded-full justify-center content-center">
+                <img src="assets/opt-5.png" alt="" class="mx-auto">
+            </div>
+            <div>
+                <h2 class=" text-neutral/70 font-bold">CashOut</h2>
+                <p class="text-neutral/50 text-sm">Cash out ${cashoutAmount} successfull to ${agentNumber}, at ${new Date()} </p>
+            </div>
+        </div>`;
     //? 4- append the div in the history container
     history.appendChild(newHistory);
   } else {

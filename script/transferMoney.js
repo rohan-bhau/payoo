@@ -28,8 +28,14 @@ document.getElementById("transfer-btn").addEventListener("click", function () {
     const newHistory = document.createElement("div");
     //? 3- create a innerHTML in the new div
     newHistory.innerHTML = `
-    <div class="bg-base-100 py-5 rounded-md pl-4">
-        Transfer Money Successfull to ${tranasferNumber}, transfer amount ${transferAmount} at ${new Date()}
+            <div class="bg-base-100 py-5 rounded-md pl-4 flex items-center gap-3">
+            <div class="bg-base-200 w-[46px] h-[46px] rounded-full justify-center content-center">
+                <img src="assets/opt-3.png" alt="" class="mx-auto">
+            </div>
+            <div>
+                <h2 class=" text-neutral/70 font-bold">Transfer Money</h2>
+                <p class="text-neutral/50 text-sm"> ${transferAmount} taka transfer successfull to ${tranasferNumber}, at ${new Date()} </p>
+            </div>
         </div>
     `;
     //? 4- append the div in the history container

@@ -31,13 +31,23 @@ function showOnly(id) {
   const history = document.getElementById("history");
   const transferMoney = document.getElementById("transfer-money");
   const bonus = document.getElementById("get-bonus")
+  const payBill = document.getElementById("pay-bill")
+//   const history = document.getElementById("history")
+  const latestPayment = document.getElementById("latest-payment")
 
   addMoney.classList.add("hidden");
   cashout.classList.add("hidden");
   history.classList.add("hidden");
   transferMoney.classList.add("hidden");
   bonus.classList.add("hidden")
+  payBill.classList.add("hidden")
+//   history.classList.add("hidden")
+latestPayment.classList.add("hidden")
 
-  const selected = document.getElementById(id);
-  selected.classList.remove("hidden");
+const selected = document.getElementById(id);
+selected.classList.remove("hidden");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  showOnly("latest-payment");
+});
