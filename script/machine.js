@@ -30,11 +30,13 @@ function showOnly(id) {
   const cashout = document.getElementById("cashout");
   const history = document.getElementById("history");
   const transferMoney = document.getElementById("transfer-money");
+  const bonus = document.getElementById("get-bonus")
 
   addMoney.classList.add("hidden");
   cashout.classList.add("hidden");
   history.classList.add("hidden");
   transferMoney.classList.add("hidden");
+  bonus.classList.add("hidden")
 
   const selected = document.getElementById(id);
   selected.classList.remove("hidden");
